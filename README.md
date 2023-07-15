@@ -1,6 +1,6 @@
 # jemalloc-alpine-image
 
-Serving jemalloc pre-built binary here, so you don't need to compile every time.
+Serving pre-built jemalloc binary here, so you don't need to compile every time.
 
 ## Usage
 
