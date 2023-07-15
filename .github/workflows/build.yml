@@ -1,0 +1,25 @@
+name: Deploy Images to GHCR
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+      build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - uses: actions/checkout@main
+
+          - uses: docker/login-action@v2
+            with:
+              registry: ghcr.io
+              username: ${{github.actor}}
+              password: ${{secrets.GITHUB_TOKEN}}
+
+          - name: 'Build Image'
+            run: |
+              docker build . -t ghcr.io/Gary50613/jemalloc-alpine:latest
+              docker push ghcr.io/Gary50613/jemalloc-alpine:latest
