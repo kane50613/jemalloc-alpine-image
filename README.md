@@ -6,7 +6,7 @@
 
 ```Dockerfile
 # Use pre-built jemalloc binary
-FROM ghcr.io/gary50613/jemalloc-alpine:latest as jemalloc
+FROM gary50613/jemalloc-alpine:latest as jemalloc
 
 # With your runner image, ex: node:alpine
 FROM node:alpine
