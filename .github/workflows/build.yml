@@ -24,6 +24,6 @@ jobs:
             with:
               context: .
               push: true
-              tags: ghcr.io/gary50613/jemalloc-alpine:latest
+              tags: gary50613/jemalloc-alpine:latest
               cache-from: type=gha
               cache-to: type=gha,mode=max
