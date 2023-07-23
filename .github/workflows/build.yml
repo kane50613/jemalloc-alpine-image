@@ -26,4 +26,5 @@ jobs:
               push: true
               tags: gary50613/jemalloc-alpine:latest
               cache-from: type=gha
+              platforms: linux/amd64,linux/arm64,linux/arm/v7
               cache-to: type=gha,mode=max
